@@ -7,10 +7,12 @@ from torch.utils.data import DataLoader
 from torchvision.utils import make_grid
 
 from .losses import RestorationLoss, batch_metrics, combined_score
-from .models.autoencoder import UniversalAE
+from .models.autoencoder import SpatialAE, UniversalAE
 
 
 def build_model(cfg):
+    if cfg.get("latent_mode", "flat") == "spatial":
+        return SpatialAE(cfg["base"], cfg["latent_ch"], cfg["dropout"])
     return UniversalAE(cfg["base"], cfg["latent_dim"], cfg["dropout"])
 
 

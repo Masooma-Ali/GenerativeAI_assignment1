@@ -65,3 +65,34 @@ class UniversalAE(nn.Module):
 
     def forward(self, x):
         return self.decoder(self.encoder(x))
+
+
+class SpatialAE(nn.Module):
+    """Convolutional-bottleneck autoencoder (ablation vs. the flat/FC bottleneck).
+
+    128x128x3 --(4 strided conv stages)--> 8x8xC --1x1 conv--> 8x8xlatent_ch (the bottleneck)
+              --1x1 conv--> 8x8xC --(4 upsample+conv stages)--> 128x128x3
+    Latent size = latent_ch * 64 values (e.g. 32 -> 2048, i.e. 24x compression of the 49,152
+    input values). Keeping the 8x8 layout preserves WHERE things are in the image.
+    Still no skip connections: everything passes through the bottleneck."""
+    def __init__(self, base=32, latent_ch=32, dropout=0.1):
+        super().__init__()
+        chs = [base, base * 2, base * 4, base * 8]
+        enc, cin = [], 3
+        for c in chs:                                           # 128->64->32->16->8
+            enc += [conv_block(cin, c, stride=2), conv_block(c, c, stride=1)]
+            cin = c
+        enc.append(nn.Conv2d(cin, latent_ch, 1))                # bottleneck: latent_ch x 8 x 8
+        self.encoder = nn.Sequential(*enc)
+        self.drop = nn.Dropout(dropout)
+        dchs = [base * 8, base * 4, base * 2, base]
+        dec = [nn.Conv2d(latent_ch, dchs[0], 1), nn.LeakyReLU(0.2, inplace=True)]
+        cin = dchs[0]
+        for c in dchs:                                          # 8->16->32->64->128
+            dec += [nn.Upsample(scale_factor=2, mode="nearest"), conv_block(cin, c), conv_block(c, c)]
+            cin = c
+        dec.append(nn.Conv2d(cin, 3, 3, 1, 1))
+        self.decoder = nn.Sequential(*dec)
+
+    def forward(self, x):
+        return torch.sigmoid(self.decoder(self.drop(self.encoder(x))))

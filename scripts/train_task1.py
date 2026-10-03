@@ -13,7 +13,8 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--data-root", default="data"); ap.add_argument("--out", default="task1")
 ap.add_argument("--epochs", type=int, default=60); ap.add_argument("--batch-size", type=int, default=64)
 ap.add_argument("--lr", type=float, default=1e-3); ap.add_argument("--base", type=int, default=32)
-ap.add_argument("--latent-dim", type=int, default=256); ap.add_argument("--dropout", type=float, default=0.1)
+ap.add_argument("--latent-dim", type=int, default=256); ap.add_argument("--latent-mode", default="flat", choices=["flat", "spatial"]); ap.add_argument("--latent-ch", type=int, default=32)
+ap.add_argument("--dropout", type=float, default=0.1)
 ap.add_argument("--alpha", type=float, default=0.8); ap.add_argument("--weight-decay", type=float, default=1e-4)
 ap.add_argument("--config", default=None, help="JSON (e.g. Optuna best_config.json) overriding the hyper-parameters")
 ap.add_argument("--resume", action="store_true"); ap.add_argument("--workers", type=int, default=2)
@@ -26,7 +27,7 @@ val_manifest = load_manifest(os.path.join(proc, "val_manifest.jsonl"))
 train_ds = PetRestorationDataset(images, indices=split["train"])
 val_ds = PetRestorationDataset(images, manifest=val_manifest)
 
-cfg = dict(base=a.base, latent_dim=a.latent_dim, dropout=a.dropout, alpha=a.alpha, lr=a.lr,
+cfg = dict(base=a.base, latent_dim=a.latent_dim, latent_mode=a.latent_mode, latent_ch=a.latent_ch, dropout=a.dropout, alpha=a.alpha, lr=a.lr,
            batch_size=a.batch_size, epochs=a.epochs, weight_decay=a.weight_decay, seed=42)
 if a.config:
     cfg.update({k: v for k, v in json.load(open(a.config)).items() if k in cfg})
