@@ -15,6 +15,7 @@ ap.add_argument("--epochs", type=int, default=60); ap.add_argument("--batch-size
 ap.add_argument("--lr", type=float, default=1e-3); ap.add_argument("--base", type=int, default=32)
 ap.add_argument("--latent-dim", type=int, default=256); ap.add_argument("--dropout", type=float, default=0.1)
 ap.add_argument("--alpha", type=float, default=0.8); ap.add_argument("--weight-decay", type=float, default=1e-4)
+ap.add_argument("--config", default=None, help="JSON (e.g. Optuna best_config.json) overriding the hyper-parameters")
 ap.add_argument("--resume", action="store_true"); ap.add_argument("--workers", type=int, default=2)
 a = ap.parse_args()
 
@@ -27,6 +28,9 @@ val_ds = PetRestorationDataset(images, manifest=val_manifest)
 
 cfg = dict(base=a.base, latent_dim=a.latent_dim, dropout=a.dropout, alpha=a.alpha, lr=a.lr,
            batch_size=a.batch_size, epochs=a.epochs, weight_decay=a.weight_decay, seed=42)
+if a.config:
+    cfg.update({k: v for k, v in json.load(open(a.config)).items() if k in cfg})
+    print("config overridden from", a.config)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print("device:", device, "| train:", len(train_ds), "val:", len(val_ds))
 best, _ = run_training(cfg, train_ds, val_ds, a.out, device, resume=a.resume, num_workers=a.workers)
