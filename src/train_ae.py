@@ -61,7 +61,13 @@ def run_training(cfg, train_ds, val_ds, out_dir, device, run_name="task1",
 
     if log_mlflow:
         import mlflow
-        mlflow.set_tracking_uri(f"file:{mlruns_dir or os.path.join(out_dir, 'mlruns')}")
+        from pathlib import Path
+        base = os.path.abspath(mlruns_dir or out_dir)
+        os.makedirs(base, exist_ok=True)
+        # new MLflow versions disable the old file store, so we use SQLite
+        mlflow.set_tracking_uri(f"sqlite:///{os.path.join(base, 'mlflow.db')}")
+        if mlflow.get_experiment_by_name(experiment) is None:
+            mlflow.create_experiment(experiment, artifact_location=Path(os.path.join(base, "artifacts")).as_uri())
         mlflow.set_experiment(experiment)
         run_ctx = mlflow.start_run(run_name=run_name, nested=mlflow.active_run() is not None)
     else:
