@@ -64,9 +64,9 @@ def occlusion_coverage(boxes, size=128):
 
 
 # ------------------------------------------------------------ condition samplers
-def sample_train_condition(rng, size=128):
-    """Training: equal-probability choice of the 4 conditions + random severity."""
-    t = CLASSES[int(rng.integers(0, 4))]
+def sample_condition(rng, t, size=128):
+    """Random severity for a GIVEN corruption type t (used by the balanced classifier
+    sampler and by the Task 2 specialists)."""
     cond = {"type": t, "severity": "sampled", "seed": int(rng.integers(0, 2**31 - 1))}
     if t == "salt_pepper":
         cond["p"] = float(rng.uniform(0.02, 0.15))
@@ -77,6 +77,11 @@ def sample_train_condition(rng, size=128):
         n = int(rng.integers(1, 4))
         cond["boxes"] = sample_boxes(rng, n, float(rng.uniform(0.10, 0.35)), size)
     return cond
+
+
+def sample_train_condition(rng, size=128):
+    """Training: equal-probability choice of the 4 conditions + random severity."""
+    return sample_condition(rng, CLASSES[int(rng.integers(0, 4))], size)
 
 
 def fixed_test_conditions(rng, size=128):

@@ -42,3 +42,14 @@ def test_train_sampler_equal_class_probability_and_ranges():
 
 def test_fixed_test_has_10_conditions():
     assert len(fixed_test_conditions(np.random.default_rng(0))) == 10
+
+
+def test_sample_condition_respects_type_and_ranges():
+    rng = np.random.default_rng(0)
+    for t in CLASSES:
+        for _ in range(200):
+            c = sample_condition(rng, t)
+            assert c["type"] == t
+            if t == "salt_pepper": assert 0.02 <= c["p"] <= 0.15
+            if t == "blur": assert c["kernel"] in (3, 5, 7)
+            if t == "occlusion": assert 1 <= len(c["boxes"]) <= 3
