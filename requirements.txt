@@ -9,3 +9,6 @@ onnxruntime
 pytorch-msssim
 pytest
 tqdm
+pandas
+matplotlib
+ 
