@@ -1,0 +1,6 @@
+   data/
+   checkpoints/
+   mlruns/
+   *.onnx
+   *.pt
+   __pycache__/
