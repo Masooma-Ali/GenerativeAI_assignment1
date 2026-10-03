@@ -53,7 +53,7 @@ def figure(indices, path, title):
             ax[r, c].imshow(im.permute(1, 2, 0).numpy() if im.ndim == 3 else im.numpy(),
                             cmap=None if im.ndim == 3 else "inferno", vmin=0, vmax=None if im.ndim == 3 else 0.5)
             ax[r, c].set_title(name, fontsize=7); ax[r, c].axis("off")
-    fig.suptitle(title); fig.tight_layout(); fig.savefig(path, dpi=130); plt.close(fig)
+    fig.suptitle(title, y=0.995); fig.tight_layout(rect=[0, 0, 1, 0.97]); fig.savefig(path, dpi=130); plt.close(fig)
 
 
 rng = np.random.default_rng(0)
