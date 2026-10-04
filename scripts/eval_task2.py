@@ -57,7 +57,7 @@ by_type = df.groupby("type")[cols].mean().round(3)
 by_sev = df.groupby(["type", "severity"])[cols].mean().round(3)
 corrupted = df[df.type != "clean"][cols].mean().round(3).to_frame("corrupted-only mean").T
 by_type.to_csv(os.path.join(a.out, f"{a.split}_by_type.csv")); by_sev.to_csv(os.path.join(a.out, f"{a.split}_by_type_severity.csv"))
-pd.set_option("display.width", 200)
+pd.set_option("display.width", 200); pd.set_option("display.max_columns", None)
 print("\n== by corruption type ==\n", by_type, "\n\n== by type and severity ==\n", by_sev, "\n\n", corrupted)
 print("\n(clean PSNR is capped at 50 dB because a perfect copy has infinite PSNR)")
 

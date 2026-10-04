@@ -66,13 +66,14 @@ class BalancedCorruptionDataset(Dataset):
 
 
 class BalancedBatchSampler:
-    """Yields lists of indices; each batch has batch_size/4 samples of every class."""
-    def __init__(self, n_images, batch_size):
+    """Yields lists of indices; each batch has batch_size/4 samples of every class.
+    epoch_fraction < 1 makes an 'epoch' a random subset (each epoch draws a fresh permutation)."""
+    def __init__(self, n_images, batch_size, epoch_fraction=1.0):
         assert batch_size % 4 == 0, "batch_size must be a multiple of 4"
-        self.n, self.per = n_images, batch_size // 4
+        self.n, self.per, self.frac = n_images, batch_size // 4, epoch_fraction
 
     def __len__(self):
-        return self.n // self.per
+        return int(self.n * self.frac) // self.per
 
     def __iter__(self):
         rng = np.random.default_rng()
