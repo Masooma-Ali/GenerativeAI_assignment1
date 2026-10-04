@@ -1,0 +1,199 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-09-09>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+)
+** ATTENTION: Overriding command lockouts (line 2).
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-pdftex.def
+) (./main.aux)
+-- Lines per column: 56 (exact).
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./main.out) (./main.out)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd) [1{/usr/local/texli
+ve/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/t
+exmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2026/texmf-dist/fonts
+/enc/dvips/lm/lm-ec.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]|\T1/ptm/m/n/8 Salt-and-
+
+Underfull \hbox (badness 7116) in paragraph at lines 67--67
+[]|$\OML/cmm/m/it/8 p \OMS/cmsy/m/n/8 ^^X \OML/cmm/m/it/8 U\OT1/cmr/m/n/8 [0\OM
+L/cmm/m/it/8 :\OT1/cmr/m/n/8 02\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 0\OML/cmm/m/it/
+8 :\OT1/cmr/m/n/8 15]$\T1/ptm/m/n/8 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+[]|\T1/ptm/m/n/8 Gaussian
+
+Underfull \hbox (badness 1354) in paragraph at lines 68--68
+[]|$\OML/cmm/m/it/8 k \OMS/cmsy/m/n/8 2 f\OT1/cmr/m/n/8 3\OML/cmm/m/it/8 ; \OT1
+/cmr/m/n/8 5\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 7\OMS/cmsy/m/n/8 g$\T1/ptm/m/n/8 ,
+ $\OML/cmm/m/it/8 ^^[ \OMS/cmsy/m/n/8 ^^X
+
+Overfull \hbox (1.54395pt too wide) in paragraph at lines 68--69
+[]|$\OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 0\OML/cmm/m/it/8 :\OT1/cm
+r/m/n/8 7)\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (5\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 1
+\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5)\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (7\OML/cmm/m
+/it/8 ; \OT1/cmr/m/n/8 2\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 5)$| 
+
+Underfull \hbox (badness 1874) in paragraph at lines 69--69
+[]|\T1/ptm/m/n/8 1--3 black boxes, joint
+[2 <./figures/t4_pairs_check.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active
+Overfull \hbox (1.88435pt too wide) in paragraph at lines 233--243
+ [][] 
+
+Overfull \hbox (6.8945pt too wide) in paragraph at lines 249--266
+ [][] 
+[3 <./figures/mlflow_ui.png (PNG copy)> <./figures/mlflow_metrics.png (PNG copy
+)>] [4 <./figures/t1_arch.png> <./figures/t1_optuna_flat_history.png> <./figure
+s/t1_optuna_flat_importance.png> <./figures/t1_optuna_spatial_history.png> <./f
+igures/t1_optuna_spatial_importance.png> <./figures/t1_curves.png>] [5]
+Underfull \vbox (badness 2922) has occurred while \output is active [6 <./figur
+es/t1_test_examples.png> <./figures/t1_test_failures.png> <./figures/t2_confusi
+on_test.png>] [7 <./figures/t2_routing_failures.png>] [8] [9 <./figures/t3_curv
+es.png> <./figures/t3_optuna_history.png> <./figures/t3_optuna_importance.png> 
+<./figures/t3_heatmap_test.png> <./figures/t3_gate_examples_test.png>]
+Overfull \hbox (11.67654pt too wide) in paragraph at lines 633--647
+ [][] 
+
+Underfull \hbox (badness 1769) in paragraph at lines 652--653
+[]\T1/ptm/m/n/10 The in-ter-face was de-signed be-fore im-ple-men-ta-tion in
+
+Underfull \hbox (badness 2460) in paragraph at lines 652--653
+\T1/ptm/m/n/10 Routed Restora-tion, Soft Mixture-of-Experts Restora-tion,
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
+[]\T1/ptm/m/n/10 The back-end is a FastAPI ser-vice over ONNX
+
+Underfull \hbox (badness 3189) in paragraph at lines 665--666
+\T1/ptm/m/n/10 Run-time (CPU) with the end-points \T1/lmtt/m/n/10 GET /api/heal
+th\T1/ptm/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
+\T1/lmtt/m/n/10 GET /api/samples\T1/ptm/m/n/10 , \T1/lmtt/m/n/10 POST /api/corr
+upt\T1/ptm/m/n/10 , \T1/lmtt/m/n/10 POST
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
+\T1/lmtt/m/n/10 /api/restore/universal\T1/ptm/m/n/10 , \T1/lmtt/m/n/10 POST /ap
+i/restore/hard\T1/ptm/m/n/10 ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
+\T1/lmtt/m/n/10 POST /api/restore/soft \T1/ptm/m/n/10 and \T1/lmtt/m/n/10 POST 
+/api/sketch\T1/ptm/m/n/10 ;
+
+Underfull \hbox (badness 1442) in paragraph at lines 665--666
+\T1/ptm/m/n/10 map as PNG im-ages, the cor-rup-tion set-tings (in-clud-ing
+
+Underfull \hbox (badness 2134) in paragraph at lines 665--666
+\T1/ptm/m/n/10 oc-clu-sion box co-or-di-nates and the mea-sured cov-er-age),
+
+Underfull \vbox (badness 10000) has occurred while \output is active [11 <./fig
+ures/t4_arch.png> <./figures/t4_curves.png> <./figures/t4_optuna_history.png> <
+./figures/t4_optuna_importance.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active [12 <./fig
+ures/t4_samples_ep000.png (PNG copy)> <./figures/t4_samples_ep050.png (PNG copy
+)> <./figures/t4_samples_ep149.png (PNG copy)> <./figures/t4_val_examples.png> 
+<./figures/t4_val_failures.png>]
+Underfull \hbox (badness 1533) in paragraph at lines 737--737
+[]|\T1/ptm/m/n/8 nginx serves the build and prox-ies \T1/lmtt/m/n/8 /api\T1/ptm
+/m/n/8 ; mod-els
+[13]
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[14 <./figures/app_shot_universal.png (PNG copy)> <./figures/app_shot_sketch.pn
+g (PNG copy)> <./figures/app_shot_hard.png (PNG copy)> <./figures/app_shot_soft
+.png (PNG copy)>] [15 <./figures/app_architecture.png>] (./main.aux) )
+(see the transcript file for additional information)</usr/local/texlive/2026/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/
+lmtk10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt8.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
+local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
+ive/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2026/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (15 pages, 21199796 bytes).
+Transcript written on main.log.

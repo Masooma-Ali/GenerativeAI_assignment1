@@ -1,0 +1,150 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{vincent2008}
+\citation{wang2004,zhao2017}
+\citation{jacobs1991}
+\citation{shazeer2017,fedus2022}
+\citation{goodfellow2014,mirza2014}
+\citation{ronneberger2015}
+\citation{isola2017}
+\citation{perez2018}
+\citation{miyato2018}
+\citation{akiba2019}
+\citation{fan2022}
+\citation{parkhi2012}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{1}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Data, Protocol and Tooling}{1}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Oxford-IIIT Pet (Tasks 1--3)}{1}{subsection.3.1}\protected@file@percent }
+\citation{fan2022}
+\citation{loshchilov2019}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Corruption configuration. Training severities are sampled at load time; validation uses one stored condition per image; the test set uses three fixed levels per corruption (10 conditions per image, 36\,690 samples).}}{2}{table.1}\protected@file@percent }
+\newlabel{tab:corr}{{I}{2}{Corruption configuration. Training severities are sampled at load time; validation uses one stored condition per image; the test set uses three fixed levels per corruption (10 conditions per image, 36\,690 samples)}{table.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces FS2K split (pairs per sketch style 0/1/2).}}{2}{table.2}\protected@file@percent }
+\newlabel{tab:fs2k}{{II}{2}{FS2K split (pairs per sketch style 0/1/2)}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}FS2K (Task 4)}{2}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Training protocol and tooling}{2}{subsection.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Pairing check: six random FS2K training photos (top) with their ground-truth sketches (bottom) and style labels. Every pair is aligned, so paired training is valid.}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig:pairs}{{1}{2}{Pairing check: six random FS2K training photos (top) with their ground-truth sketches (bottom) and style labels. Every pair is aligned, so paired training is valid}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}Hyper-parameter optimisation overview}{2}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Task 1: Universal Multi-Corruption Denoising Autoencoder}{2}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Architecture and the bottleneck investigation}{2}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Loss, training and optimisation}{2}{subsection.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Experiment tracking in MLflow. Left: the 20 runs of the Task~4 Optuna study (completed and pruned trials). Right: the separately logged loss components of the final cGAN run (D-real, D-fake, G-adversarial, G-$\ell _1$, validation D-fake) and the best validation score.}}{3}{figure.2}\protected@file@percent }
+\newlabel{fig:mlflow}{{2}{3}{Experiment tracking in MLflow. Left: the 20 runs of the Task~4 Optuna study (completed and pruned trials). Right: the separately logged loss components of the final cGAN run (D-real, D-fake, G-adversarial, G-$\ell _1$, validation D-fake) and the best validation score}{figure.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Optuna search spaces (all studies: TPE sampler, seed 42, median pruner).}}{3}{table.3}\protected@file@percent }
+\newlabel{tab:search}{{III}{3}{Optuna search spaces (all studies: TPE sampler, seed 42, median pruner)}{table.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Optuna outcomes. ``Score'' is the study objective of the best trial.}}{3}{table.4}\protected@file@percent }
+\newlabel{tab:optuna}{{IV}{3}{Optuna outcomes. ``Score'' is the study objective of the best trial}{table.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Results}{3}{subsection.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Task 1 autoencoders. (a) Flat baseline with a fully connected latent vector. (b) Final model with a convolutional $8{\times }8{\times }64$ bottleneck ($b=48$). Neither model has skip connections.}}{4}{figure.3}\protected@file@percent }
+\newlabel{fig:t1arch}{{3}{4}{Task 1 autoencoders. (a) Flat baseline with a fully connected latent vector. (b) Final model with a convolutional $8{\times }8{\times }64$ bottleneck ($b=48$). Neither model has skip connections}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Task 1 Optuna results: flat study (left two) and spatial study (right two), optimisation history and fANOVA parameter importance. The best spatial trial (0.614) is far above the best flat trial (0.424) for the same 12-epoch budget.}}{4}{figure.4}\protected@file@percent }
+\newlabel{fig:t1optuna}{{4}{4}{Task 1 Optuna results: flat study (left two) and spatial study (right two), optimisation history and fANOVA parameter importance. The best spatial trial (0.614) is far above the best flat trial (0.424) for the same 12-epoch budget}{figure.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces fANOVA parameter importances (largest first; computed from few completed trials, so only indicative).}}{4}{table.5}\protected@file@percent }
+\newlabel{tab:importance}{{V}{4}{fANOVA parameter importances (largest first; computed from few completed trials, so only indicative)}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Visual results and failure cases}{4}{subsection.4.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Bottleneck ablation on the validation manifest (all 736 images, sampled severities).}}{4}{table.6}\protected@file@percent }
+\newlabel{tab:ablation}{{VI}{4}{Bottleneck ablation on the validation manifest (all 736 images, sampled severities)}{table.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Task 1 training curves: the final spatial model (80 epochs) against the best flat Optuna trial (12 epochs): validation score, validation PSNR and the spatial model's training and validation loss.}}{4}{figure.5}\protected@file@percent }
+\newlabel{fig:t1curves}{{5}{4}{Task 1 training curves: the final spatial model (80 epochs) against the best flat Optuna trial (12 epochs): validation score, validation PSNR and the spatial model's training and validation loss}{figure.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Task 1, test set by corruption type (PSNR in dB). ``In'' = corrupted input, ``Out'' = restored.}}{5}{table.7}\protected@file@percent }
+\newlabel{tab:t1type}{{VII}{5}{Task 1, test set by corruption type (PSNR in dB). ``In'' = corrupted input, ``Out'' = restored}{table.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces Task 1, test set by corruption type and severity (3\,669 images each).}}{5}{table.8}\protected@file@percent }
+\newlabel{tab:t1sev}{{VIII}{5}{Task 1, test set by corruption type and severity (3\,669 images each)}{table.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Export}{5}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Task 2: Corruption Classifier and Hard-Routed Specialists}{5}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Corruption classifier}{5}{subsection.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {IX}{\ignorespaces Classifier, test set, per class (normalised confusion matrix in Fig.~\ref {fig:confusion}).}}{5}{table.9}\protected@file@percent }
+\newlabel{tab:clf}{{IX}{5}{Classifier, test set, per class (normalised confusion matrix in Fig.~\ref {fig:confusion})}{table.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Specialist autoencoders}{5}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Hard-routed inference}{5}{subsection.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Task 1 on the official test set. Left: twelve representative examples (clean target, corrupted input, restored output with SSIM, absolute error). Right: the four lowest-SSIM failure cases.}}{6}{figure.6}\protected@file@percent }
+\newlabel{fig:t1vis}{{6}{6}{Task 1 on the official test set. Left: twelve representative examples (clean target, corrupted input, restored output with SSIM, absolute error). Right: the four lowest-SSIM failure cases}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Normalised four-class confusion matrix of the corruption classifier on the official test set (counts in parentheses).}}{6}{figure.7}\protected@file@percent }
+\newlabel{fig:confusion}{{7}{6}{Normalised four-class confusion matrix of the corruption classifier on the official test set (counts in parentheses)}{figure.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {X}{\ignorespaces Specialists on the validation manifest (final epoch; best-score epoch reported in the last column).}}{6}{table.10}\protected@file@percent }
+\newlabel{tab:spec}{{X}{6}{Specialists on the validation manifest (final epoch; best-score epoch reported in the last column)}{table.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {XI}{\ignorespaces Task 2, test set by type: universal model versus hard routing with oracle and predicted routes (PSNR dB / SSIM).}}{6}{table.11}\protected@file@percent }
+\newlabel{tab:t2type}{{XI}{6}{Task 2, test set by type: universal model versus hard routing with oracle and predicted routes (PSNR dB / SSIM)}{table.11}{}}
+\citation{shazeer2017,fedus2022}
+\@writefile{lot}{\contentsline {table}{\numberline {XII}{\ignorespaces Routing errors on the test set and their cost (PSNR loss = oracle minus predicted).}}{7}{table.12}\protected@file@percent }
+\newlabel{tab:routefail}{{XII}{7}{Routing errors on the test set and their cost (PSNR loss = oracle minus predicted)}{table.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}Export}{7}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Task 3: Jointly Trained Soft Mixture-of-Experts}{7}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Model}{7}{subsection.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The six test routing failures with the largest quality loss (clean target, input, oracle route, predicted route with PSNR). Black letterbox bars and dark backgrounds are mistaken for occlusion; a soft-focus photo is mistaken for blur.}}{7}{figure.8}\protected@file@percent }
+\newlabel{fig:routefail}{{8}{7}{The six test routing failures with the largest quality loss (clean target, input, oracle route, predicted route with PSNR). Black letterbox bars and dark backgrounds are mistaken for occlusion; a soft-focus photo is mistaken for blur}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Optimisation and training}{7}{subsection.6.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {XIII}{\ignorespaces Soft MoE vs.\ hard routing (predicted) vs.\ universal model, official test set (PSNR dB / SSIM).}}{8}{table.13}\protected@file@percent }
+\newlabel{tab:t3type}{{XIII}{8}{Soft MoE vs.\ hard routing (predicted) vs.\ universal model, official test set (PSNR dB / SSIM)}{table.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {XIV}{\ignorespaces Test-set PSNR (dB) of the three restoration systems by corruption type and severity (SSIM in parentheses for occlusion).}}{8}{table.14}\protected@file@percent }
+\newlabel{tab:sev3}{{XIV}{8}{Test-set PSNR (dB) of the three restoration systems by corruption type and severity (SSIM in parentheses for occlusion)}{table.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Reconstruction results}{8}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-D}}Gating analysis}{8}{subsection.6.4}\protected@file@percent }
+\newlabel{sec:gate}{{\mbox  {VI-D}}{8}{Gating analysis}{subsection.6.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {XV}{\ignorespaces Mean gate weights per true corruption and severity (official test set).}}{8}{table.15}\protected@file@percent }
+\newlabel{tab:gate}{{XV}{8}{Mean gate weights per true corruption and severity (official test set)}{table.15}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {XVI}{\ignorespaces Mixed-corruption stress test, official test images (PSNR dB / SSIM).}}{8}{table.16}\protected@file@percent }
+\newlabel{tab:mixed}{{XVI}{8}{Mixed-corruption stress test, official test images (PSNR dB / SSIM)}{table.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-E}}Mixed corruptions: a negative result}{8}{subsection.6.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Soft-MoE training (shaded: gate warm-up with frozen experts): validation score, training loss terms, mean validation gate weight per branch (dotted: 0.25), and the Optuna history and importances.}}{9}{figure.9}\protected@file@percent }
+\newlabel{fig:t3curves}{{9}{9}{Soft-MoE training (shaded: gate warm-up with frozen experts): validation score, training loss terms, mean validation gate weight per branch (dotted: 0.25), and the Optuna history and importances}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Gating behaviour on the official test set. Left: mean routing weight per true corruption and severity. Right: examples in which one expert dominates (top four rows) and in which the weights are distributed (bottom four rows, all low-severity occlusions), with soft- and hard-routing outputs and PSNR.}}{9}{figure.10}\protected@file@percent }
+\newlabel{fig:t3vis}{{10}{9}{Gating behaviour on the official test set. Left: mean routing weight per true corruption and severity. Right: examples in which one expert dominates (top four rows) and in which the weights are distributed (bottom four rows, all low-severity occlusions), with soft- and hard-routing outputs and PSNR}{figure.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-F}}Cost and export}{9}{subsection.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Task 4: Style-Conditioned Face-to-Sketch cGAN}{9}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Architecture}{9}{subsection.7.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {XVII}{\ignorespaces Task 4, validation set, generated with the true style ($\ell _1$ and PSNR on the [0,1] scale). Baseline: the grayscale photo used as the sketch.}}{10}{table.17}\protected@file@percent }
+\newlabel{tab:t4}{{XVII}{10}{Task 4, validation set, generated with the true style ($\ell _1$ and PSNR on the [0,1] scale). Baseline: the grayscale photo used as the sketch}{table.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Losses and training}{10}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-C}}Results}{10}{subsection.7.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {XVIII}{\ignorespaces Style-conditioning check, validation. Rows: true style; columns: style the generator was told. Mean SSIM (left) and mean $\ell _1$ (right).}}{10}{table.18}\protected@file@percent }
+\newlabel{tab:swap}{{XVIII}{10}{Style-conditioning check, validation. Rows: true style; columns: style the generator was told. Mean SSIM (left) and mean $\ell _1$ (right)}{table.18}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {XIX}{\ignorespaces ONNX export and verification (CPU, batch 1).}}{10}{table.19}\protected@file@percent }
+\newlabel{tab:onnx}{{XIX}{10}{ONNX export and verification (CPU, batch 1)}{table.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-D}}Export}{10}{subsection.7.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Task 4 networks. Top: U-Net generator; the style embedding is concatenated to the photo and modulates every decoder block through FiLM. Bottom: conditional PatchGAN discriminator with its own style embedding, and the losses.}}{11}{figure.11}\protected@file@percent }
+\newlabel{fig:t4arch}{{11}{11}{Task 4 networks. Top: U-Net generator; the style embedding is concatenated to the photo and modulates every decoder block through FiLM. Bottom: conditional PatchGAN discriminator with its own style embedding, and the losses}{figure.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces cGAN training: the four separately logged loss components, training and validation $\ell _1$, validation SSIM and score, and the Optuna history and importances.}}{11}{figure.12}\protected@file@percent }
+\newlabel{fig:t4curves}{{12}{11}{cGAN training: the four separately logged loss components, training and validation $\ell _1$, validation SSIM and score, and the Optuna history and importances}{figure.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Application Design and Deployment}{11}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-A}}Design process}{11}{subsection.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-B}}Backend}{11}{subsection.8.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces The same fixed validation photos after epochs 0, 50 and 149 (rows: photo, ground truth, generated in style 0, 1, 2). Early outputs are grey blobs; by epoch 50 the facial layout and hair contours appear; later epochs mainly sharpen the strokes.}}{12}{figure.13}\protected@file@percent }
+\newlabel{fig:t4samples}{{13}{12}{The same fixed validation photos after epochs 0, 50 and 149 (rows: photo, ground truth, generated in style 0, 1, 2). Early outputs are grey blobs; by epoch 50 the facial layout and hair contours appear; later epochs mainly sharpen the strokes}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Task 4 validation results. Left: photo, ground truth and the sketch generated in each of the three styles (the true style marked). Right: the four lowest-SSIM failure cases, all dominated by long or curly hair.}}{12}{figure.14}\protected@file@percent }
+\newlabel{fig:t4vis}{{14}{12}{Task 4 validation results. Left: photo, ground truth and the sketch generated in each of the three styles (the true style marked). Right: the four lowest-SSIM failure cases, all dominated by long or curly hair}{figure.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-C}}Frontend}{12}{subsection.8.3}\protected@file@percent }
+\bibcite{vincent2008}{1}
+\bibcite{wang2004}{2}
+\bibcite{zhao2017}{3}
+\bibcite{jacobs1991}{4}
+\bibcite{shazeer2017}{5}
+\bibcite{fedus2022}{6}
+\bibcite{goodfellow2014}{7}
+\bibcite{mirza2014}{8}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-D}}Containerised deployment}{13}{subsection.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Discussion and Decisions}{13}{section.9}\protected@file@percent }
+\newlabel{sec:discussion}{{IX}{13}{Discussion and Decisions}{section.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {X}Conclusion}{13}{section.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  A: Use of AI Tools}{13}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  B: Decision Log}{13}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{13}{section*.3}\protected@file@percent }
+\bibcite{ronneberger2015}{9}
+\bibcite{isola2017}{10}
+\bibcite{perez2018}{11}
+\bibcite{miyato2018}{12}
+\bibcite{akiba2019}{13}
+\bibcite{loshchilov2019}{14}
+\bibcite{parkhi2012}{15}
+\bibcite{fan2022}{16}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces The running application with the trained ONNX models. Top left: Universal Restoration (salt-and-pepper, high: 13.5$\to $29.1\,dB). Top right: Face-to-Sketch Generator in all three styles. Bottom left: Hard-Routed Restoration (blur, 99.92\% confidence, blur expert selected). Bottom right: Soft Mixture-of-Experts on a low-severity occlusion, where the weight is split between the occlusion expert (85\%) and the identity branch (15\%).}}{14}{figure.15}\protected@file@percent }
+\newlabel{fig:app}{{15}{14}{The running application with the trained ONNX models. Top left: Universal Restoration (salt-and-pepper, high: 13.5$\to $29.1\,dB). Top right: Face-to-Sketch Generator in all three styles. Bottom left: Hard-Routed Restoration (blur, 99.92\% confidence, blur expert selected). Bottom right: Soft Mixture-of-Experts on a low-severity occlusion, where the weight is split between the occlusion expert (85\%) and the identity branch (15\%)}{figure.15}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {XX}{\ignorespaces Chronological decisions, reasons and evidence.}}{15}{table.20}\protected@file@percent }
+\newlabel{tab:log}{{XX}{15}{Chronological decisions, reasons and evidence}{table.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces System architecture: browser, nginx frontend container, FastAPI backend container with ONNX Runtime, and model files mounted from the host.}}{15}{figure.16}\protected@file@percent }
+\newlabel{fig:arch}{{16}{15}{System architecture: browser, nginx frontend container, FastAPI backend container with ONNX Runtime, and model files mounted from the host}{figure.16}{}}
+\gdef \@abspage@last{15}

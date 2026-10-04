@@ -36,7 +36,7 @@ export default function RestorationWorkspace({
   extraFields = {},
   controls,
   insights,
-  outputTitle = 'Restored output',
+  outputTitle = 'Restored',
 }) {
   const [file, setFile] = useState(null)
   const [corr, setCorr] = useState(DEFAULT_CORRUPTION)

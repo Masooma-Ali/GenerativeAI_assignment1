@@ -65,11 +65,11 @@ export default function FaceToSketch() {
             </div>
             <Card title="Photo → Sketch">
               <div className={`grid gap-4 sm:grid-cols-2 ${result.sketches.length > 1 ? 'lg:grid-cols-4' : 'lg:grid-cols-2'}`}>
-                <ImageCard title="Original photograph (128×128)" src={result.input_image} />
+                <ImageCard title="Photo (128×128)" src={result.input_image} />
                 {result.sketches.map((s) => (
                   <ImageCard
                     key={s.style}
-                    title={`Generated · ${s.name}`}
+                    title={s.name}
                     src={s.image}
                     downloadName={`sketch_style${s.style}.png`}
                     highlight

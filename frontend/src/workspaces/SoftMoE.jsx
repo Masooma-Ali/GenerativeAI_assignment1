@@ -9,7 +9,7 @@ export default function SoftMoE() {
     <RestorationWorkspace
       endpoint="/api/restore/soft"
       downloadPrefix="soft_moe"
-      outputTitle="Mixture output"
+      outputTitle="Mixture"
       insights={(r) => (
         <Card
           title="Routing weights"
