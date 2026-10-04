@@ -1,6 +1,8 @@
-   data/
-   checkpoints/
-   mlruns/
-   *.onnx
-   *.pt
-   __pycache__/
+data/
+checkpoints/
+mlruns/
+*.onnx
+*.pt
+__pycache__/
+frontend/node_modules/
+frontend/dist/

@@ -1,0 +1,35 @@
+{
+  "classifier": {
+    "file": "task2_classifier.onnx",
+    "size_mb": 4.7,
+    "max_abs_diff": 1.1920928955078125e-07,
+    "consistent": true,
+    "cpu_ms_batch1": 7.7
+  },
+  "salt_pepper": {
+    "file": "task2_specialist_salt_pepper.onnx",
+    "size_mb": 26.6,
+    "max_abs_diff": 2.6226043701171875e-06,
+    "consistent": true,
+    "cpu_ms_batch1": 39.1
+  },
+  "blur": {
+    "file": "task2_specialist_blur.onnx",
+    "size_mb": 26.6,
+    "max_abs_diff": 1.6689300537109375e-06,
+    "consistent": true,
+    "cpu_ms_batch1": 39.3
+  },
+  "occlusion": {
+    "file": "task2_specialist_occlusion.onnx",
+    "size_mb": 26.6,
+    "max_abs_diff": 2.0563602447509766e-06,
+    "consistent": true,
+    "cpu_ms_batch1": 40.1
+  },
+  "pipeline": {
+    "route_mismatches": 0,
+    "max_abs_diff": 2.0563602447509766e-06,
+    "consistent": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "onnx_file": "task3_soft_moe.onnx",
+  "size_mb": 84.5,
+  "max_abs_diff_restored": 1.2516975402832031e-06,
+  "max_abs_diff_weights": 4.76837158203125e-07,
+  "tolerance": 0.0001,
+  "consistent": true,
+  "cpu_ms_batch1": 132.8,
+  "opset": 17
+}
