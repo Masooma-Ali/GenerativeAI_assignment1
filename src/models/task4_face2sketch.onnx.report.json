@@ -1,0 +1,9 @@
+{
+  "onnx_file": "task4_face2sketch.onnx",
+  "size_mb": 168.0,
+  "max_abs_diff": 9.834766387939453e-07,
+  "tolerance": 0.0001,
+  "consistent": true,
+  "cpu_ms_batch1": 29.3,
+  "opset": 17
+}
