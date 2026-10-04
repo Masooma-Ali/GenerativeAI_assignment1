@@ -1,0 +1,13 @@
+# backend build context is the repo root: keep it small
+.git
+.claude
+data
+checkpoints
+mlruns
+**/__pycache__
+**/*.pt
+**/*.onnx
+frontend
+scripts
+tests
+*.pdf

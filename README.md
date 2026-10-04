@@ -1,5 +1,19 @@
 # GenerativeAI_assignment1
 
+## Quick start (Docker)
+
+1. Put the ONNX model files in `src/models/` (see the table below).
+2. From the repository root run:
+
+```bash
+docker compose up --build
+```
+
+3. Open http://localhost:8080. The API and its Swagger UI are also at http://localhost:8000/docs.
+
+`src/models/` and `backend/samples/` are mounted into the backend container, so adding a model
+or sample image only needs `docker compose restart backend`, not a rebuild. Stop with `docker compose down`.
+
 ## Web application (local, without Docker)
 
 The app has a **FastAPI** backend (`backend/`) that serves the ONNX models and a **React + Tailwind**

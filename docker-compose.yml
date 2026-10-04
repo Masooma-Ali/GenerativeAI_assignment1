@@ -1,0 +1,29 @@
+# Start the whole application:   docker compose up --build
+# Then open http://localhost:8080
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: genai-a1-backend
+    environment:
+      MODEL_DIR: /app/models
+    volumes:
+      # ONNX models (+ *.report.json) are read from ./src/models on the host
+      - ./src/models:/app/models:ro
+      # clean sample images shown in Tasks 1-3
+      - ./backend/samples:/app/backend/samples:ro
+    ports:
+      - "8000:8000"        # optional: direct API access / Swagger UI at http://localhost:8000/docs
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    image: genai-a1-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
